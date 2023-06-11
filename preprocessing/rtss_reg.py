@@ -119,7 +119,7 @@ for pt in df.iloc:
         
         csv.to_csv(f'temp.csv', index=False)
         
-        #Why the hell should we use the Inverse???
+        #Why the Inverse?
         os.system(f'antsApplyTransformsToPoints -d 3 -i temp.csv -o temp_reg.csv -t [{anonymized_data}/{pt.ID}/Composite.h5, 1]')
                 
         csv = pd.read_csv('temp_reg.csv')
